@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>任务三：三栏式布局</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        background-color: #fff;
+      }
+      p {
+        line-height: 1.75em;
+        margin-bottom: 1em;
+      }
+      .share {
+        padding: 20px;
+        border: 1px solid #999;
+        float: left;
+      }
+      .wrapper {
+        margin: 20px;
+        background-color: #eee;
+      }
+      .left,
+      .right {
+        box-sizing: border-box;
+      }
+      .left {
+        width: 200px;
+        font-size: 0;
+      }
+      .center {
+        margin: 0 20px;
+        width: calc(100% - 402px);
+      }
+      .right {
+        width: 120px;
+      }
+      .left__span {
+        margin-left: 20px;
+        vertical-align: top;
+      }
+      .right__p {
+        margin-bottom: 20px;
+        width: 80px;
+        font-size: 0;
+      }
+      .right__p:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper share">
+      <div class="left share">
+        <img src="https://avatars1.githubusercontent.com/u/3139237?v=3&s=80" width="80" height="80" />
+        <span class="left__span">团队名称</span>
+      </div>
+      <div class="center share">
+        <p>个人开发者</p>
+        <p>
+          名丘有丝对玉欢钟夫羊悲其水月须。上三人得歌昔君歌尔我金复朝万宰。斗留侧酌美成堂河名明平天雪换悲。
+          美生醒古散有月销留不来高曲陈十。得樽丹寞出发镜贵烹用散暮陈到发。听馔进醒白宰钟同乐青杯古水销愿。
+          足金将为回侧暮贵马丘会馔还尔高。黄五少百必留欢王恣意时歌沽出镜。愿言空万烹为斗同朝花回裘不愿醉。
+        </p>
+        <p>
+          名丘有丝对玉欢钟夫羊悲其水月须。上三人得歌昔君歌尔我金复朝万宰。斗留侧酌美成堂河名明平天雪换悲。
+          美生醒古散有月销留不来高曲陈十。得樽丹寞出发镜贵烹用散暮陈到发。听馔进醒白宰钟同乐青杯古水销愿。
+          足金将为回侧暮贵马丘会馔还尔高。黄五少百必留欢王恣意时歌沽出镜。愿言空万烹为斗同朝花回裘不愿醉。
+        </p>
+      </div>
+      <div class="right share">
+        <p class="right__p"><img src="https://avatars1.githubusercontent.com/u/3139237?v=3&s=80" width="80" height="80" /></p>
+        <p class="right__p"><img src="https://avatars1.githubusercontent.com/u/3139237?v=3&s=80" width="80" height="80" /></p>
+        <p class="right__p"><img src="https://avatars1.githubusercontent.com/u/3139237?v=3&s=80" width="80" height="80" /></p>
+      </div>
+    </div>
+  </body>
+</html>
