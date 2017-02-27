@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>任务二：零基础HTML及CSS编码（一）</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      ol,
+      ul {
+        list-style-position: inside;
+      }
+      .center {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .card {
+        background-color: #fff;
+        padding: 20px 20px;
+        box-shadow: 0 2px 2px #9E9E9E;
+      }
+    </style>
+    <style>
+
+      .header-wrapper {
+          height: 60px;
+          background-color: #424242;
+      }
+      .header {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header__logo {
+        height: 40px;
+      }
+      .header__ul {
+        list-style-type: none;
+        font-size: 12px;
+      }
+      .header__li {
+        float: left;
+        padding-left: 20px;
+      }
+      .header__a,
+      .header__a--active {
+        color: #fff;
+        text-decoration: none;
+      }
+      .header__a--active {
+        color: #BDBDBD;
+      }
+    </style>
+    <style>
+      .content-background {
+        background-color: #ddd;
+        padding: 20px 0;
+      }
+      .content-wrapper:after {
+        display: table;
+        content: '';
+        clear: both;
+      }
+      .main {
+        float: left;
+        width: calc(100% - 420px);
+      }
+      .article {
+        margin-bottom: 20px;
+      }
+      .article p,
+      .article ul,
+      .article ol{
+        line-height: 1.75em;
+        font-size: 14px;
+        margin-bottom: 1em;
+      }
+      .article-title {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      .article-subtitle {
+        font-size: 14px;
+        color: #9E9E9E;
+        margin: 10px 0;
+      }
+      .article-meta {
+        font-size: 12px;
+        color: #9E9E9E;
+        margin: 10px 0;
+      }
+      .article-p {
+        text-indent: 2em;
+      }
+      .article__ul,
+      .article__ol {
+          padding-left: 2em;
+      }
+      .article__ul {
+        list-style-type: none;
+      }
+      .frame {
+        width: 100px;
+        border: 1px solid #9E9E9E;
+        padding: 10px;
+        margin-left: 2em;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+      .frame__p {
+        font-size: 12px;
+        text-align: center;
+      }
+      .frame__img {
+        width: 100%;
+      }
+      .article-table {
+        width: 100%;
+        border: 1px solid #9E9E9E;
+        border-collapse: collapse;
+      }
+      .article-table th,
+      .article-table td {
+        border: 1px solid #BDBDBD;
+        font-size: 12px;
+        line-height: 2em;
+        padding-left: 5px;
+      }
+      .article-table th {
+        width: 40%;
+        text-align: left;
+        color: #fff;
+        background-color: #424242;
+      }
+      .article-table th:last-child {
+        width: 20%;
+      }
+      .article-table tfoot {
+        background-color: #BDBDBD;
+      }
+    </style>
+    <style>
+      .side-bar {
+        box-sizing: border-box;
+        width: 400px;
+        float: right;
+      }
+      .side-title {
+        font-size: 14px;
+        line-height: 2em;
+        border-left: 2px solid #BDBDBD;
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+      .reg-form__div {
+        font-size: 12px;
+        display: table;
+      }
+      .form__p {
+        display: table-row;
+        line-height: 2.5em;
+      }
+      .form__label,
+      .form__input,
+      .form__span {
+        display: table-cell;
+      }
+      .form__label {
+        text-align: right;
+        vertical-align: top;
+      }
+      .form__input,
+      .form__span {
+        text-align: left;
+      }
+      .notice {
+        color: #9E9E9E;
+        line-height: 2em;
+        margin-bottom: 10px;
+      }
+      textarea.form__input {
+        width: 250px;
+        height: 100px;
+      }
+      button {
+        width: 100%;
+        height: 30px;
+        color: #fff;
+        background-color: #2962FF;
+        border: none;
+        border-radius: 8px;
+      }
+      ::-webkit-input-placeholder {
+        color: inherit;
+      }
+      :-moz-placeholder {
+        color: inherit;
+      }
+      ::-moz-placeholder {
+        color: inherit;
+      }
+      :-ms-input-placeholder {
+        color: inherit;
+      }
+    </style>
+    <style>
+      .footer-wrapper {
+        background-color: #212121;
+      }
+      .footer {
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <div class="center header">
+        <h1 class="header__logo"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Baidu.svg/1280px-Baidu.svg.png" height="40" /></h1>
+        <nav class="header__nav">
+          <ul class="header__ul">
+            <li class="header__li"><a class="header__a" href="#">导航链接一</a></li>
+            <li class="header__li"><a class="header__a" href="#">导航链接二</a></li>
+            <li class="header__li"><a class="header__a" href="#">导航链接三</a></li>
+            <li class="header__li"><a class="header__a--active" href="#">导航链接四</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="content-background">
+      <div class="content-wrapper center">
+        <main class="main">
+          <article class="article card">
+            <h2 class="article-title">文章一级标题</h2>
+            <h3 class="article-subtitle">文章二级标题</h3>
+            <p class="article-meta">
+              <span>文章作者</span>
+              <span>文章发表时间</span>
+            </p>
+            <p class="article-p">
+              回言愁镜得羊君丘见同岑如寞欢裘。惟材有与为侧烹子天名寂来昔有白。圣马之君陈贤发醒必回材同水古昔。
+              <br /> 杯人百斗见人上钱者悲为贤莫材天。五斗尔朝悲时侧材出听须但王钱水。白岑饮尽主宴人白之皆鼓醉名玉必。 成寞意昔百裘成悲呼销贵来发花寂。黄空呼空少白听水不三寞停馔如花。言烹莫曲还材其有愁不皆岑还悲百。
+              <a href="http://ife.baidu.com">这里有一个连接到 http://ife.baidu.com</a>。<strong>这里有个粗体字。</strong>
+            </p>
+            <p><img src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" width="371" height="209" /></p>
+            <p class="article-p">
+              回言愁镜得羊君丘见同岑如寞欢裘。惟材有与为侧烹子天名寂来昔有白。圣马之君陈贤发醒必回材同水古昔。
+              <br /> 杯人百斗见人上钱者悲为贤莫材天。五斗尔朝悲时侧材出听须但王钱水。白岑饮尽主宴人白之皆鼓醉名玉必。 成寞意昔百裘成悲呼销贵来发花寂。黄空呼空少白听水不三寞停馔如花。言烹莫曲还材其有愁不皆岑还悲百。
+              <a href="http://ife.baidu.com">这里有一个连接到 http://ife.baidu.com</a>。<strong>这里有个粗体字。</strong>
+            </p>
+          </article>
+          <article class="article card">
+            <h2 class="article-title">另一篇文章的一级标题</h2>
+            <h3 class="article-subtitle">文章二级标题</h3>
+            <p class="article-meta">
+              <span>文章作者</span>
+              <span>文章发表时间</span>
+            </p>
+            <p class="article-p">
+              回言愁镜得羊君丘见同岑如寞欢裘。惟材有与为侧烹子天名寂来昔有白。圣马之君陈贤发醒必回材同水古昔。
+              <br /> 杯人百斗见人上钱者悲为贤莫材天。五斗尔朝悲时侧材出听须但王钱水。白岑饮尽主宴人白之皆鼓醉名玉必。 成寞意昔百裘成悲呼销贵来发花寂。黄空呼空少白听水不三寞停馔如花。言烹莫曲还材其有愁不皆岑还悲百。
+              <a href="http://ife.baidu.com">这里有一个链接到 http://ife.baidu.com</a>。<strong>这里有个粗体字。</strong>
+            </p>
+            <p><img src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" width="371" height="209" /></p>
+            <ul class="article__ul">
+              <li>列表项目一</li>
+              <li>列表项目二</li>
+              <li>列表项目三</li>
+            </ul>
+          </article>
+          <article class="article card">
+            <h2 class="article-title">图片</h2>
+            <div class="frame">
+              <p class="frame__p">好看的图片</p>
+              <img class="frame__img" src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" />
+            </div>
+            <div class="frame">
+              <p class="frame__p">好看的图片</p>
+              <img class="frame__img" src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" />
+            </div>
+            <div class="frame">
+              <p class="frame__p">好看的图片</p>
+              <img class="frame__img" src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" />
+            </div>
+            <div class="frame">
+              <p class="frame__p">好看的图片</p>
+              <img class="frame__img" src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" />
+            </div>
+            <div class="frame">
+              <p class="frame__p">好看的图片</p>
+              <img class="frame__img" src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" />
+            </div>
+            <div class="frame">
+              <p class="frame__p">好看的图片</p>
+              <img class="frame__img" src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" />
+            </div>
+            <div class="frame">
+              <p class="frame__p">好看的图片</p>
+              <img class="frame__img" src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" />
+            </div>
+            <div class="frame">
+              <p class="frame__p">好看的图片</p>
+              <img class="frame__img" src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" />
+            </div>
+            <div class="frame">
+              <p class="frame__p">好看的图片</p>
+              <img class="frame__img" src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" />
+            </div>
+            <div class="frame">
+              <p class="frame__p">好看的图片</p>
+              <img class="frame__img" src="http://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/fed/ife/ife_tutor/%E8%AF%BE%E7%A8%8B%E9%85%8D%E5%9B%BE.3fb31f3e5af7e8d7.jpg" />
+            </div>
+          </article>
+          <article class="article card">
+            <h2 class="article-title">最后一篇文章一级标题</h2>
+            <h3 class="article-subtitle">文章二级标题</h3>
+            <p class="article-meta">
+              <span>文章作者</span>
+              <span>文章发表时间</span>
+            </p>
+            <ol class="article__ol">
+              <li>排名1</li>
+              <li>排名2</li>
+              <li>排名3</li>
+            </ol>
+            <p>
+              下面是一个表格
+              <table class="article-table">
+                <thead>
+                  <tr>
+                    <th>表头</th>
+                    <th>表头</th>
+                    <th>表头</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                  </tr>
+                  <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                  </tr>
+                  <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                  </tr>
+                  <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>总计</td>
+                    <td colspan="2">1000</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </p>
+          </article>
+        </main>
+        <aside class="side-bar card">
+          <h2 class="side-title">这里以后是一个侧栏，这是侧栏的标题</h2>
+          <form class="reg-form">
+            <div class="reg-form__div">
+              <p class="form__p">
+                <label class="form__label">请输入邮箱地址：</label>
+                <input class="form__input" type="text" placeholder="这是一个文本输入框" />
+              </p>
+              <p class="form__p">
+                <label class="form__label"></label>
+                <span class="form__span notice">邮箱地址请按要求格式输入</span>
+              </p>
+              <p class="form__p">
+                <label class="form__label">请输入密码：</label>
+                <input class="form__input" type="password" placeholder="这是一个文本输入框" />
+              </p>
+              <p class="form__p">
+                <label class="form__label">请重复输入密码：</label>
+                <input class="form__input" type="password" placeholder="这是一个文本输入框" />
+              </p>
+              <p class="form__p">
+                <label class="form__label"></label>
+                <span class="form__span notice">密码请为6-16位英文数字</span>
+              </p>
+              <p class="form__p">
+                <label class="form__label">性别：</label>
+                <span class="form__input">
+                  <input type="radio" value="male" checked />Male
+                  <input type="radio" value="female" />女
+                </span>
+              </p>
+              <p class="form__p">
+                <label class="form__label">城市：</label>
+                <select class="form__input">
+                  <option value="beijing" selected>北京</option>
+                </select>
+              </p>
+              <p class="form__p">
+                <label class="form__label">爱好：</label>
+                <span class="form__input">
+                  <label><input type="checkbox" value="sport" />运动</label>
+                  <label><input type="checkbox" value="art" />艺术</label>
+                  <label><input type="checkbox" value="science" />科学</label>
+                </span>
+              </p>
+              <p class="form__p">
+                <label class="form__label">个人描述：</label>
+                <textarea class="form__input">这是一个多行输入框，输入您的个人描述</textarea>
+              </p>
+            </div>
+            <button type="submit">确认提交</button>
+          </form>
+        </aside>
+      </div>
+    </div>
+    <footer class="footer-wrapper">
+      <p class="footer center">
+        版权所有&#169;
+      </p>
+    </footer>
+  </body>
+</html>
